@@ -1,4 +1,15 @@
+using Common.Logging;
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog(Serilogger.Configure);
+
+Log.Information("Starting Product API up");
+
+try
+{
+
 
 // Add services to the container.
 
@@ -23,3 +34,13 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Unhandled exception");
+}
+finally
+{
+    Log.Information("Shut down Product API complete");
+    Log.CloseAndFlush();
+}

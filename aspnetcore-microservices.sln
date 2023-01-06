@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{98FB4982-571B-4489-BD7F-B453EE00D7B1}"
 	ProjectSection(SolutionItems) = preProject
+		docker-compose.override.yml = docker-compose.override.yml
+		docker-compose.yml = docker-compose.yml
 		global.json = global.json
 		README.md = README.md
 	EndProjectSection
@@ -37,27 +39,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Product", "Product", "{4F3E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScheduledJob", "ScheduledJob", "{10691F48-2040-4C64-8DB7-52BC26AE07C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHealthStatus", "src\WebApps\WebHealthStatus\WebHealthStatus.csproj", "{11C28A65-DCA9-4393-ADFE-763DC8454964}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebHealthStatus", "src\WebApps\WebHealthStatus\WebHealthStatus.csproj", "{11C28A65-DCA9-4393-ADFE-763DC8454964}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.API", "src\Services\Basket.API\Basket.API.csproj", "{2490EC05-E32C-41DD-996E-010E4E315433}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.API", "src\Services\Basket.API\Basket.API.csproj", "{2490EC05-E32C-41DD-996E-010E4E315433}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.API", "src\Services\Customer.API\Customer.API.csproj", "{87196BE7-216C-4260-B500-C3C1D795CEEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.API", "src\Services\Customer.API\Customer.API.csproj", "{87196BE7-216C-4260-B500-C3C1D795CEEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Product.API", "src\Services\Inventory.Product.API\Inventory.Product.API.csproj", "{218C2F18-7B71-4535-A97A-383D07BE0B36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Product.API", "src\Services\Inventory.Product.API\Inventory.Product.API.csproj", "{218C2F18-7B71-4535-A97A-383D07BE0B36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.API", "src\Services\Ordering.API\Ordering.API.csproj", "{962F4646-5ECE-478E-BFE2-ABAD0DFF1747}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.API", "src\Services\Ordering.API\Ordering.API.csproj", "{962F4646-5ECE-478E-BFE2-ABAD0DFF1747}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.API", "src\Services\Product.API\Product.API.csproj", "{BBEE3071-8F98-4CDD-B4F0-2C908187676E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.API", "src\Services\Product.API\Product.API.csproj", "{BBEE3071-8F98-4CDD-B4F0-2C908187676E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.API", "src\Services\Hangfire.API\Hangfire.API.csproj", "{ACD1B8FD-3293-483F-B5F1-137037707792}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.API", "src\Services\Hangfire.API\Hangfire.API.csproj", "{ACD1B8FD-3293-483F-B5F1-137037707792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "src\BuildingBlocks\Contracts\Contracts.csproj", "{3DECC918-87D7-4510-A9EE-DCA2B5D2E02C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "src\BuildingBlocks\Contracts\Contracts.csproj", "{3DECC918-87D7-4510-A9EE-DCA2B5D2E02C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\BuildingBlocks\Infrastructure\Infrastructure.csproj", "{2A8986AC-0528-40FF-82CC-290F0DF0E4F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\BuildingBlocks\Infrastructure\Infrastructure.csproj", "{2A8986AC-0528-40FF-82CC-290F0DF0E4F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\BuildingBlocks\Shared\Shared.csproj", "{1C06C751-54DC-4B81-A6F4-759041EF161C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "src\BuildingBlocks\Shared\Shared.csproj", "{1C06C751-54DC-4B81-A6F4-759041EF161C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGw", "src\ApiGateways\OcelotApiGw\OcelotApiGw.csproj", "{C1266FDD-8DA6-4845-95BA-2732AEFFF049}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotApiGw", "src\ApiGateways\OcelotApiGw\OcelotApiGw.csproj", "{C1266FDD-8DA6-4845-95BA-2732AEFFF049}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
