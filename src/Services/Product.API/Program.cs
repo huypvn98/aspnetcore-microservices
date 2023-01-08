@@ -1,43 +1,39 @@
 using Common.Logging;
+using Product.API.Extensions;
+using Product.API.Persistence;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Host.UseSerilog(Serilogger.Configure);
 
 Log.Information("Starting Product API up");
 
 try
 {
+    builder.Host.UseSerilog(Serilogger.Configure);
 
+    builder.Host.AddAppConfigurations();
 
-// Add services to the container.
+    // Add services to the container.
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+    builder.Services.AddInfrastructure(builder.Configuration);   
 
-var app = builder.Build();
+    var app = builder.Build();
+    app.UseInfrastructure();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
+    app.MigrateDatabase<ProductContext>((context, _) =>
+    { 
+        ProductContextSeed.SeedProductAsync(context, Log.Logger).Wait();
+    }).Run();
+    //app.Run();
 }
 catch (Exception ex)
 {
-    Log.Fatal(ex, "Unhandled exception");
+    string type = ex.GetType().Name;
+    if(type.Equals("StopTheHostException", StringComparison.Ordinal))
+    {
+        throw;
+    }    
+    Log.Fatal(ex, $"Unhandled exception: {ex.Message}");
 }
 finally
 {
